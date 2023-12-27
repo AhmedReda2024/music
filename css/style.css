@@ -1,0 +1,713 @@
+/* ========== Start Global Styles ========== -->*/
+:root {
+  --main-color: #022988;
+  --primary-color: #ef5068;
+  --black: #13131a;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style: none;
+  transition: all 0.2s ease-in-out;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  /* border-radius: 10px; */
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.btn {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 150px;
+  height: 50px;
+  border-radius: 100vh 100vh;
+}
+.btn:hover {
+  background-color: #a63a4aa7;
+}
+.heading {
+  font-size: 2.5rem;
+  padding-block: 4rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+body:has(#home:target) .home-link,
+body:has(#about:target) .about-link,
+body:has(#artists:target) .artists-link,
+body:has(#gallery:target) .gallery-link,
+body:has(#blog:target) .blog-link,
+body:has(#contact:target) .contact-link {
+  color: var(--primary-color);
+}
+/* ========== End Global Styles ========== -->*/
+
+/* ========== Start Header Styles ========== -->*/
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 9%;
+  background-color: #f0f4ff;
+  box-shadow: var(--box-shadow);
+}
+.list-menu {
+  display: flex;
+}
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: var(--black);
+}
+.header .logo i {
+  color: var(--main-color);
+  padding-right: 0.5rem;
+}
+.header .list-menu li a {
+  font-size: 1rem;
+  color: var(--black);
+  margin-left: 30px;
+}
+.header .list-menu li a:hover {
+  color: var(--primary-color);
+}
+#toggleMenu {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--black);
+  display: none;
+}
+/* ========== End Header Styles ========== -->*/
+
+/* ========== Start Home Styles ========== -->*/
+.home {
+  min-height: 100vh;
+  display: flex;
+  background-image: linear-gradient(#00000081, #00000070),
+    url(../images/bghome.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home .container .home-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+.home .container .home-content h1 {
+  font-size: 3rem;
+}
+.home .container .home-content h3 {
+  font-size: 2rem;
+  padding-block: 1rem;
+}
+
+section#home .home-content h3::after {
+  content: "";
+  animation-name: typing;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+@keyframes typing {
+  0% {
+    content: "  |";
+  }
+  3% {
+    content: "  |";
+  }
+  6% {
+    content: " s|";
+  }
+  9% {
+    content: " so |";
+  }
+  12% {
+    content: " son |";
+  }
+  15% {
+    content: " song |";
+  }
+  18% {
+    content: " songs |";
+  }
+  21% {
+    content: " songs |";
+  }
+  24% {
+    content: " song |";
+  }
+  27% {
+    content: " son |";
+  }
+  29% {
+    content: " so |";
+  }
+  32% {
+    content: " s |";
+  }
+  35% {
+    content: "  |";
+  }
+  38% {
+    content: " a |";
+  }
+  41% {
+    content: " ar |";
+  }
+  44% {
+    content: " art |";
+  }
+  47% {
+    content: " arti |";
+  }
+  50% {
+    content: " artis |";
+  }
+  53% {
+    content: " artist |";
+  }
+  56% {
+    content: " artists |";
+  }
+  59% {
+    content: "  |";
+  }
+  62% {
+    content: " artist |";
+  }
+  65% {
+    content: " artis |";
+  }
+  68% {
+    content: " arti |";
+  }
+  71% {
+    content: " art |";
+  }
+  74% {
+    content: " ar |";
+  }
+  77% {
+    content: " a |";
+  }
+  80% {
+    content: " |";
+  }
+  83% {
+    content: " a |";
+  }
+  86% {
+    content: " al |";
+  }
+  89% {
+    content: " alb |";
+  }
+  92% {
+    content: " albu |";
+  }
+  93% {
+    content: " album |";
+  }
+  94% {
+    content: " albums |";
+  }
+  95% {
+    content: " albums |";
+  }
+  96% {
+    content: " album |";
+  }
+  97% {
+    content: " albu |";
+  }
+  98% {
+    content: " alb |";
+  }
+  99% {
+    content: " al |";
+  }
+  100% {
+    content: " a |";
+  }
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 15px;
+  border-radius: 50%;
+}
+.arrow span {
+  font-size: 25px;
+}
+.arrow span a {
+  color: #fff;
+}
+/* ========== End Home Styles ========== -->*/
+
+/* ========== Start ABOUT Styles ========== -->*/
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+}
+.about .row .about-info {
+  flex: 1 1 40rem;
+}
+
+.about .row .about-info .about-content h3 {
+  font-size: 2rem;
+  padding-block: 1rem;
+  color: var(--primary-color);
+}
+.about .row .about-info .about-content p {
+  font-size: 1.1rem;
+  padding-block: 1rem;
+  line-height: 2;
+}
+.about .row .about-info .about-content .about-list li {
+  font-size: 1.5625rem;
+  /* color: var(--main-color); */
+  padding-top: 1.5rem;
+}
+.about .row .about-info .about-content .about-list li i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  padding-right: 1rem;
+}
+.about .row .about-info .about-content .about-list p {
+  font-size: 1rem;
+  padding-block: 1rem;
+  line-height: 2;
+}
+.about .row .about-info .about-content .btn {
+  margin-block: 1rem;
+}
+.about .row .about-image {
+  flex: 1 1 30rem;
+}
+.about .row .about-image img {
+  width: 100%;
+  height: 100%;
+}
+/* ========== End ABOUT Styles ========== -->*/
+
+/* ========== Start Artists Styles ========== -->*/
+.artists {
+  background-color: rgb(245, 244, 244);
+}
+
+.artists .container .title p span {
+  color: #ce1212;
+}
+.artists .box .card {
+  width: 31%;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  border-radius: 0.9375rem;
+  padding-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+.artists .box .card:hover {
+  scale: 1.1;
+}
+.artists .box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 80px;
+}
+.artists .box .card .text {
+  background-color: white;
+  text-align: center;
+  padding-bottom: 1.25rem;
+  font-family: "Inter", "sans-serif";
+}
+.artists .box .card .text h3 {
+  font-size: 1.1875rem;
+  color: #212529;
+  font-weight: 700;
+  padding-bottom: 0.625rem;
+}
+.artists .box .card .text span {
+  color: #7f7f90;
+  font-size: 0.875rem;
+}
+.artists .box .card .text p {
+  font-size: 0.9375rem;
+  padding-top: 0.625rem;
+  color: #7f7f90;
+  font-style: italic;
+  padding-inline: 30px;
+}
+
+.artists .box .card .artists-image {
+  position: relative;
+}
+.artists .box .card .artists-image img {
+  width: 100%;
+}
+svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.artists .box .card .artists-image .links {
+  position: absolute;
+  top: 5%;
+  left: 100%;
+  background-color: rgba(255, 255, 255, 0.664);
+  opacity: 1;
+  width: 10%;
+  min-height: 40%;
+  text-align: center;
+  transition: 0.3s 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.artists .box .card .artists-image:hover .links {
+  left: 85%;
+}
+.artists .box .card .artists-image .links ul li {
+  padding-block: 10px;
+}
+.artists .box .card .artists-image .links a {
+  color: #7f7f90;
+  transition: 0.3s ease-in-out;
+}
+.artists .box .card .artists-image .links a:hover {
+  color: black;
+}
+
+/* ========== End Artists Styles ========== -->*/
+
+/* ========== Start Gallery Styles ========== -->*/
+.gallery .container .gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery .container .gallery-row .card {
+  width: calc((100% - 60px) / 3);
+  margin-left: 15px;
+  padding-block: 1rem;
+}
+.gallery .container .gallery-row .card .item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.gallery .container .gallery-row .card .item .gallery-text {
+  text-align: center;
+  background-color: #ffffffe8;
+  width: 80%;
+  padding: 10px;
+  position: absolute;
+  bottom: 20px;
+  border-radius: 10px;
+}
+
+.light-box {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dNone {
+  display: none;
+}
+.box-content {
+  width: 80%;
+  height: 70vh;
+  background-image: url(../images/gallery-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  position: relative;
+}
+.box-content i {
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding-inline: 0.625rem;
+}
+#closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+.box-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+/* ========== End Gallery Styles ========== -->*/
+
+/* ========== Start Blog Styles ========== -->*/
+.blog {
+  background-color: rgb(245, 244, 244);
+}
+.blog .blog-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.blog .blog-row .blog-card {
+  width: calc((100% - 60px) / 3);
+  margin-left: 15px;
+  padding-block: 1rem;
+}
+.blog .blog-row .blog-card .blog-text {
+  background-color: #fff;
+  padding: 15px;
+}
+.blog .blog-row .blog-card .blog-text h3 {
+  padding-block: 15px;
+  color: var(--black);
+  font-size: 1.5rem;
+}
+
+.blog .blog-row .blog-card .blog-text span i {
+  padding-right: 7px;
+  color: var(--primary-color);
+}
+.blog .blog-row .blog-card .blog-text p {
+  font-size: 15px;
+}
+.blog .blog-row .blog-card .image {
+  height: 30rem;
+  width: 100%;
+  overflow: hidden;
+}
+.blog .blog-row .blog-card .blog-text a {
+  margin-top: 15px;
+}
+.blog .blog-row .blog-card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog .blog-row .blog-card .image img:hover {
+  transform: scale(1.2);
+}
+/* ========== End Blog Styles ========== -->*/
+
+/* ========== Start Contact Styles ========== -->*/
+
+.contact .contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.contact .contact-row .image {
+  flex: 1 1 15rem;
+}
+.contact .contact-row .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contact .contact-row form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.contact .contact-row form .input-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact .contact-row form .input-box,
+.contact .contact-row form textarea {
+  padding: 8px;
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #333;
+  text-transform: none;
+  border: 0.1rem solid rgb(0, 0, 0, 0.3);
+  border-radius: 5px;
+  width: 49%;
+}
+.contact .contact-row form textarea {
+  width: 100%;
+  height: 200px;
+  resize: vertical;
+}
+/* ========== End Contact Styles ========== -->*/
+
+/* ========== start Footer Styles ========== -->*/
+footer {
+  min-height: 10vh;
+  background-color: #212121;
+  padding-block: 80px;
+}
+.footer .social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  color: grey;
+}
+
+.social li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: inherit;
+  background-color: #313131;
+  transition: color 0.3s ease-in-out;
+}
+.social li:hover a {
+  color: var(--primary-color);
+}
+footer p {
+  color: grey;
+  text-align: center;
+  padding-top: 10px;
+}
+/* ========== End Footer Styles ========== -->*/
+
+@media (max-width: 1399.98px) {
+}
+@media (max-width: 1199.98px) {
+  .gallery .container .gallery-row .card {
+    width: calc((100% - 45px) / 2);
+    /* padding-block: 1rem; */
+  }
+}
+@media (max-width: 991.98px) {
+  .artists .box .card {
+    width: 48%;
+    gap: 15px;
+  }
+  .gallery .container .gallery-row .card {
+    width: calc((100% - 45px) / 2);
+    /* padding-block: 1rem; */
+  }
+  .blog .blog-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .blog .blog-row .blog-card {
+    width: calc((100% - 45px) / 2);
+    /* margin-left: 15px; */
+  }
+}
+@media (max-width: 767.98px) {
+  #toggleMenu {
+    display: inline-block;
+  }
+  .header .list-menu {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    display: block;
+  }
+  .header .list-menu.active {
+    right: 1.5rem;
+    transition: 0.4s ease-in-out;
+  }
+  .header .list-menu a {
+    font-size: 1.13rem;
+    margin: 2rem 1rem;
+    display: block;
+    color: #000;
+  }
+  .home .home-content h3 {
+    font-size: 5rem;
+  }
+  .artists .box .card {
+    width: 100%;
+  }
+  .gallery .container .gallery-row .card {
+    width: 100%;
+  }
+  .blog .blog-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .blog .blog-row .blog-card {
+    width: calc((100% - 45px) / 1);
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  html {
+    font-size: 50%;
+  }
+}

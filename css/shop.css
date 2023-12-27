@@ -1,0 +1,275 @@
+/* ========== Start Global Styles ========== -->*/
+:root {
+  --main-color: #022988;
+  --primary-color: #ef5068;
+  --black: #13131a;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style: none;
+  transition: all 0.2s ease-in-out;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  /* border-radius: 10px; */
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.btn {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 150px;
+  height: 50px;
+  border-radius: 100vh 100vh;
+}
+.btn:hover {
+  background-color: #a63a4aa7;
+}
+.heading {
+  font-size: 2.5rem;
+  padding-block: 4rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+body:has(#home:target) .home-link,
+body:has(#about:target) .about-link,
+body:has(#artists:target) .artists-link,
+body:has(#gallery:target) .gallery-link,
+body:has(#blog:target) .blog-link,
+body:has(#contact:target) .contact-link {
+  color: var(--primary-color);
+}
+/* ========== End Global Styles ========== -->*/
+
+/* ========== Start Header Styles ========== -->*/
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 9%;
+  background-color: #f0f4ff;
+  box-shadow: var(--box-shadow);
+}
+.list-menu {
+  display: flex;
+}
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: var(--black);
+}
+.header .logo i {
+  color: var(--main-color);
+  padding-right: 0.5rem;
+}
+.header .list-menu li a {
+  font-size: 1rem;
+  color: var(--black);
+  margin-left: 30px;
+}
+.header .list-menu li a:hover {
+  color: var(--primary-color);
+}
+#toggleMenu {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--black);
+  display: none;
+}
+
+/* ========== End Header Styles ========== -->*/
+
+/* ========== Start Shop Styles ========== -->*/
+.shop {
+  background-color: #eee5ead7;
+  padding-block: 50px;
+}
+.shop-title {
+  margin-top: 20px;
+}
+.shop-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop-row .shop-card {
+  width: calc((100% - 50px) / 4);
+  position: relative;
+  margin-left: 10px;
+  padding-block: 1.5rem;
+}
+.shop-row .shop-card img {
+  width: 100%;
+  cursor: pointer;
+}
+.shop-row .shop-card .image {
+  width: 100%;
+  overflow: hidden;
+}
+.shop-row .shop-card .image img:hover {
+  transform: scale(1.2);
+}
+.shop-row .shop-card .shop-text {
+  background-color: #b1aaab;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.shop-row .shop-card .shop-text h3 {
+  padding-block: 8px;
+}
+.shop-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  width: 150px;
+  height: 50px;
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 15px;
+}
+.shop-btn:hover {
+  background-color: #b63044;
+}
+.text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 5px;
+}
+.fa-cart-shopping {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+/* ========== End Shop Styles ========== -->*/
+
+/* ========== start Footer Styles ========== -->*/
+footer {
+  background-color: #212121;
+  padding-block: 40px;
+}
+.footer .social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  color: grey;
+}
+
+.social li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: inherit;
+  background-color: #313131;
+  transition: color 0.3s ease-in-out;
+}
+.social li:hover a {
+  color: var(--primary-color);
+}
+footer p {
+  color: grey;
+  text-align: center;
+  padding-top: 10px;
+}
+/* ========== End Footer Styles ========== -->*/
+
+/* ========== Start Media Query ========== -->*/
+@media (max-width: 991.98px) {
+  .shop-row {
+    justify-content: center;
+  }
+  .shop-row .shop-card {
+    width: calc((100% - 50px) / 3);
+  }
+}
+@media (max-width: 767.98px) {
+  #toggleMenu {
+    display: inline-block;
+  }
+  .header .list-menu {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    display: block;
+  }
+  .header .list-menu.active {
+    right: 1.5rem;
+    transition: 0.4s ease-in-out;
+  }
+  .header .list-menu a {
+    font-size: 1.13rem;
+    margin: 2rem 1rem;
+    display: block;
+    color: #000;
+  }
+  .shop-row .shop-card {
+    width: calc((100% - 50px) / 2);
+  }
+}
+
+@media (max-width: 575.98px) {
+  html {
+    font-size: 50%;
+  }
+  .shop-row .shop-card {
+    width: calc((100% - 50px) / 1);
+  }
+}
+
+/* ========== End Media Query ========== -->*/
